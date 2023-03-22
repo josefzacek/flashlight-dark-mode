@@ -1,0 +1,40 @@
+body.dark-mode {
+  background-image: url(Stars.png);
+  clip-path: circle(150px at var(--x) var(--y));
+}
+
+body .circle {
+  display: none;
+  top: -150px;
+  left: -150px;
+  width: 300px;
+  height: 300px;
+  box-shadow: inset 0px 0px 20px 40px rgb(255 255 255 / 10%);
+  transform: translate(var(--x), var(--y));
+  background: #ffffff4d;
+}
+
+body.dark-mode .circle {
+  display: block;
+}
+
+h1 {
+  font-size: 100px;
+  color: transparent;
+  background: linear-gradient(to left, transparent 0%, black);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+body.dark-mode h1 {
+  color: #fff;
+}
+
+.switch-row span {
+  cursor: pointer;
+}
+
+.switch-row input {
+  transform: scale(2.5);
+  cursor: pointer;
+}
