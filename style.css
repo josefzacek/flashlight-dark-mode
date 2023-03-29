@@ -1,5 +1,7 @@
 body.dark-mode {
   background-image: url(Stars.png);
+  background-repeat: no-repeat;
+  background-size: cover;
   clip-path: circle(150px at var(--x) var(--y));
 }
 
