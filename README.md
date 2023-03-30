@@ -1,2 +1,3 @@
-# flashlight-dark-mode
+# Flashlight mode
+
 Funny flashlight dark mode
