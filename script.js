@@ -28,3 +28,26 @@ $(".switch-row input").on('change', function() {
 $(".switch-row span").on('click', function() {
   switchMode($(this).text());
 });
+
+
+function checkDevice() {
+  let hasHover = matchMedia('(hover:hover)').matches;
+  let isHandheld = window.matchMedia("only screen and (max-width: 768px)").matches;
+
+  if (hasHover == false || isHandheld) {
+    $(".circle.rounded-circle, .container.desktop-view").addClass("d-none");
+    $(".container.mobile-view").removeClass("d-none");
+  } else {
+    $(".circle.rounded-circle, .container.desktop-view").removeClass("d-none");
+    $(".container.mobile-view").addClass("d-none");
+  }
+};
+
+$(window).resize(function() {
+  clearTimeout(window.resizedFinished);
+  window.resizedFinished = setTimeout(function(){
+    checkDevice()
+  }, 250);
+});
+
+checkDevice();
